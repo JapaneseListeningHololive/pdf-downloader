@@ -1,0 +1,116 @@
+:root{
+    --bg:#0b0c10;
+    --card:#121318;
+    --text:#e8e8ea;
+    --muted:#a7a7b0;
+    --line:#2a2c35;
+    --accent:#6ee7ff;
+    --btn:#1b1d25;
+  }
+  
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); }
+  body{
+    font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Segoe UI", Arial, sans-serif;
+    line-height:1.5;
+  }
+  
+  .wrap{ max-width:980px; margin:0 auto; padding:18px; }
+  header h1{ margin:0 0 6px; font-size:22px; }
+  .h2{ margin:0; font-size:16px; }
+  .muted{ color:var(--muted); }
+  .small{ font-size:13px; }
+  
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px;
+    margin:14px 0;
+  }
+  
+  .row{ display:flex; gap:14px; align-items:flex-end; flex-wrap:wrap; }
+  .row2{ align-items:center; }
+  .col{ flex:1; min-width:260px; }
+  
+  label{ display:block; font-size:12px; margin:0 0 6px; color:var(--muted); }
+  
+  input, select{
+    width:100%;
+    background:#0f1117;
+    border:1px solid var(--line);
+    color:var(--text);
+    padding:10px 12px;
+    border-radius:10px;
+    outline:none;
+  }
+  
+  input:focus, select:focus{
+    border-color: rgba(110, 231, 255, .65);
+    box-shadow: 0 0 0 3px rgba(110, 231, 255, .12);
+  }
+  
+  .btn{
+    appearance:none;
+    border:1px solid var(--line);
+    background:var(--btn);
+    color:var(--text);
+    padding:10px 12px;
+    border-radius:10px;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    user-select:none;
+  }
+  .btn:hover{ border-color: rgba(110, 231, 255, .35); }
+  .btn:active{ transform: translateY(1px); }
+  
+  .btn.ghost{ background:transparent; }
+  
+  .status{ margin-left:6px; }
+  
+  .fileList{
+    margin-top:10px;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:10px;
+  }
+  
+  .fileItem{
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:12px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    justify-content:space-between;
+    background:#0f1117;
+  }
+  
+  .fileMeta{
+    min-width:0;
+  }
+  .fileName{
+    font-weight:600;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .fileSub{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:2px;
+  }
+  
+  .pill{
+    font-size:12px;
+    padding:4px 8px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    color:var(--muted);
+  }
+  
+  .spacer{ flex:1; }
