@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Script PDF Downloader</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="wrap">
+    <h1>Script PDF Downloader</h1>
+    <p class="muted">
+      GitHub上のフォルダを読み込み、PDFを一覧表示してダウンロードできます。
+    </p>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="row">
+        <div class="col">
+          <label for="searchInput">フォルダ検索</label>
+          <input id="searchInput" type="text" placeholder="例：一石二鳥" autocomplete="off" />
+        </div>
+        <div class="col">
+          <label for="lessonSelect">フォルダ選択</label>
+          <select id="lessonSelect">
+            <option value="">読み込み中...</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row row2">
+        <button id="reloadBtn" class="btn">再読み込み</button>
+        <a id="openGithubFolder" class="btn ghost" href="#" target="_blank" rel="noreferrer">GitHubで開く</a>
+        <span id="status" class="status muted"></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row row2">
+        <h2 class="h2">PDF一覧</h2>
+        <div class="spacer"></div>
+        <button id="copyLinksBtn" class="btn ghost">リンクをコピー</button>
+      </div>
+
+      <div id="fileList" class="fileList"></div>
+    </section>
+
+    <section class="card muted small">
+      <details>
+        <summary>セットアップ方法（GitHub Pages）</summary>
+        <ol>
+          <li>この3ファイル（index.html / styles.css / script.js）をリポジトリに追加</li>
+          <li>script.js の CONFIG を自分のリポジトリに合わせて編集</li>
+          <li>Settings → Pages で公開（/docs か root を選ぶ）</li>
+        </ol>
+      </details>
+    </section>
+  </main>
+
+  <footer class="wrap muted small">
+    <p>Tip: フォルダ名や日本語パスでも動くようにURLエンコードしてあります。</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
